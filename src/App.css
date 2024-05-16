@@ -1,0 +1,70 @@
+#root {
+  max-width: 1200px;
+  min-width: 800px;
+  height: 90vh;
+  margin: 0 auto;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 10px;
+  user-select: none;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.header{  
+  height: 65px;
+  background-color: grey;
+}
+
+.input_area{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+}
+form{
+  display: flex;
+  align-items: center;
+  padding-left :80px;
+  gap: 20px;
+}
+form button{
+  margin-left: 120px;
+}
+
+
+.sub_title{
+  display: flex;
+  justify-content: start;
+}
+.card_container{
+  display: flex;
+}
+.on_going_card, .done_card{
+  border: 1px solid white;
+  border-radius: 10px;
+  width: 30%;
+  margin: 1%;
+}
+
+.on_going_button, .done_button{
+  display: flex;
+  justify-content: space-around;
+}
