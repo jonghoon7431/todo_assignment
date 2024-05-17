@@ -10,42 +10,39 @@ function Form({ todo, setTodo }) {
       alert("제목과 내용 모두 입력해주세요");
       return;
     }
-    setTodo([
-      ...todo,
-      { id: Date.now(), todoTitle, todoContent, isDone: false },
-    ]);
-    console.log(todo);
+    setTodo([...todo, { id: Date.now(), todoTitle, todoContent, isDone: false }]);
     setTodoTitle("");
     setTodoContent("");
   };
 
   return (
-    <div style={inputArea}>
+    <div className="input_area">
       <form onSubmit={addContent}>
-        <label>제목: </label>
-        <input
-          type="text"
-          placeholder="제목"
-          value={todoTitle}
-          onChange={(event) => setTodoTitle(event.target.value)}
-        />
+        <div className="submit_input">
+          <div className="title">
+            <label>제목: </label>
+            <input
+              type="text"
+              placeholder="제목"
+              value={todoTitle}
+              onChange={(event) => setTodoTitle(event.target.value)}
+            />
+          </div>
+          <div className="content">
+            <label>내용: </label>
+            <input
+              type="text"
+              placeholder="내용"
+              value={todoContent}
+              onChange={(event) => setTodoContent(event.target.value)}
+            />
+          </div>
+        </div>
 
-        <label>내용: </label>
-        <input
-          type="text"
-          placeholder="내용"
-          value={todoContent}
-          onChange={(event) => setTodoContent(event.target.value)}
-        />
         <button type="submit">추가</button>
       </form>
     </div>
   );
 }
 
-const inputArea = {
-  display: "flex",
-  justifyContent: "spaceBetween",
-  borderBottom: "1px solid white",
-};
 export default Form;

@@ -1,9 +1,8 @@
 #root {
   max-width: 1200px;
   min-width: 800px;
-  height: 90vh;
+  height: auto;
   margin: 0 auto;
-  padding: 5px;
   text-align: center;
   border: 1px solid white;
   border-radius: 10px;
@@ -14,10 +13,12 @@ body {
   padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.header {
+  background-color: grey;
+  border-radius: 10px 10px 0 0;
+  line-height: 80px;
+  height: 80px;
+  margin: 0;
 }
 
 .card {
@@ -28,27 +29,55 @@ body {
   color: #888;
 }
 
+.input_area {
+  display: flex;
+  border-bottom: 1px solid white;
+  height: 60px;
+}
+form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
 form button {
-  margin-left: 120px;
+  position: absolute;
+  right: calc(25%);
+}
+.submit_input {
+  width: 60%;
+  display: flex;
+  margin-left: 18%;
+}
+.title {
+  margin-right: 20px;
 }
 
 .sub_title {
   display: flex;
   justify-content: start;
 }
-.card_container {
+.ongoing_container,
+.done_container {
   display: flex;
+  height: 260px;
 }
-.on_going_card,
-.done_card {
+.todo_card {
   border: 1px solid white;
   border-radius: 10px;
-  width: 30%;
+  width: 200px;
   margin: 1%;
 }
-
-.on_going_button,
-.done_button {
+.todo_card h2 {
+  border-bottom: 1px solid white;
+  margin: 0;
+  height: 40px;
+}
+.todo_card h3 {
+  height: 150px;
+  margin: 0;
+}
+.todo_button {
+  margin: 0;
   display: flex;
   justify-content: space-around;
 }
