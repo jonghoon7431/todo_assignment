@@ -15,7 +15,7 @@ function TodoList({ todo, setTodo }) {
       <h2 className="sub_title">on going..⏱</h2>
       <div className="ongoing_container">
         {todo
-          .filter((e) => e.isDone === false)
+          .filter((e) => !e.isDone)
           .map((todo) => (
             <TodoItem todo={todo} key={todo.id} removeContent={removeContent} toggle={toggle} />
           ))}
@@ -24,7 +24,7 @@ function TodoList({ todo, setTodo }) {
       <h2 className="sub_title">Done !🎉</h2>
       <div className="done_container">
         {todo
-          .filter((e) => e.isDone === true)
+          .filter((e) => e.isDone)
           .map((todo) => (
             <TodoItem todo={todo} key={todo.id} removeContent={removeContent} toggle={toggle} />
           ))}
