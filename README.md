@@ -21,3 +21,6 @@
 * TodoItem
 
 ### 완성본 미리보기
+<img src="https://github.com/jonghoon7431/todo_assignment/assets/152875407/744d6617-0a33-4837-8ea5-1345b462f209" width="600"/>
+
+<img src="https://github.com/jonghoon7431/todo_assignment/assets/152875407/8178d524-4c0c-4385-8344-47a7b4bb314a" width="600"/>
